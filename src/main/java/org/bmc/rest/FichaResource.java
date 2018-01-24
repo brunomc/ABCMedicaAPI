@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import javax.inject.Inject;
+import javax.websocket.server.PathParam;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -24,12 +25,14 @@ public class FichaResource {
 		serv.save(f);
 	}
 	@PUT
-	public void update(long id) throws ExecutionException {
+	@Path("{id}")
+	public void update(@PathParam("id") long id) throws ExecutionException {
 		Ficha f = serv.buscarPorId(id);
 		serv.update(f);
 	}
 	@DELETE
-	public void delete(long id) throws ExecutionException {
+	@Path("{id}")
+	public void delete(@PathParam("id") long id) throws ExecutionException {
 		Ficha f = serv.buscarPorId(id);
 		serv.delete(f);
 	}
