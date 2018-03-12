@@ -3,8 +3,9 @@
 	 <persistence-unit name="bmcPU" transaction-type="JTA">
         <provider>org.hibernate.ejb.HibernatePersistence</provider> 
         <jta-data-source>java:jboss/datasources/bmc</jta-data-source>
-       <class>org.bmc.Animal</class>
-         <class>org.bmc.Ficha</class>
+        <class>org.bmc.model.Consulta</class>
+        <class>org.bmc.model.Medico</class>
+        <class>org.bmc.model.Paciente</class>
         <properties>
 			<property name="hibernate.archive.autodetection" value="class, hbm"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
