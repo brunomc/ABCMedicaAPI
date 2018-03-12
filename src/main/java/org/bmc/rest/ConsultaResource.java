@@ -36,8 +36,8 @@ public class ConsultaResource {
 	@Path("{id}")
 	public void delete(@PathParam("id") long id) throws ExecutionException {
 		System.out.println("ok");
-		//Consulta f = serv.buscarPorId(id);
-		//serv.delete(f);
+		Consulta f = serv.buscarPorId(id);
+		serv.delete(f);
 	}
 	@GET
 	@Path("{id}")
