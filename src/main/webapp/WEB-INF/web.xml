@@ -9,6 +9,16 @@
       <param-name>cors.allowed.origins</param-name>
       <param-value>*</param-value>
     </init-param>
+     <init-param>
+      <description>A comma separated list of HTTP verbs, using which a CORS request can be made.</description>
+      <param-name>cors.allowed.methods</param-name>
+      <param-value>GET,POST,HEAD,OPTIONS,PUT,DELETE</param-value>
+    </init-param>
+    <init-param>
+      <description>A comma separated list of allowed headers when making a non simple CORS request.</description>
+      <param-name>cors.allowed.headers</param-name>
+      <param-value>Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers</param-value>
+    </init-param>
    </filter>
   <filter-mapping>
     <filter-name>CORS Filter</filter-name>
